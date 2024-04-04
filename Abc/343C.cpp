@@ -2,6 +2,7 @@
 using namespace std;
 using ll = long long;
 
+//回文かチェック
 bool check(ll n){
     string s = to_string(n);
     string t = s;
@@ -10,9 +11,8 @@ bool check(ll n){
 }
 
 int main(){
-    ll n;
-    cin>>n;
+    ll n; cin>>n;
     ll ans = 0;
     for(ll i=1;i*i*i<=n;i++)if(check(i*i*i)) ans=i*i*i;
-    cout<<ans<<'\n';
+    cout<<ans<<endl;
 }
